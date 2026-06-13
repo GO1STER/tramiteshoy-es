@@ -1,2 +1,2 @@
-# ads.txt — Rellenar con tu publisher ID tras la aprobación de AdSense
-# Ejemplo: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Reemplaza pub-XXXXXXXXXX con tu Publisher ID de Google AdSense
+# google.com, pub-XXXXXXXXXX, DIRECT, f08c47fec0942fa0

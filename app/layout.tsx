@@ -5,6 +5,9 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { CookieProvider } from '@/components/CookieProvider'
 import { BackToTop } from '@/components/BackToTop'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -57,10 +60,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Saltar al contenido principal
         </a>
         <CookieProvider>
+          <GoogleAnalytics />
           <Header />
           <main id="main-content">{children}</main>
           <Footer />
           <BackToTop />
+          <Analytics />
+          <SpeedInsights />
         </CookieProvider>
       </body>
     </html>
