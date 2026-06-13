@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Política de cookies',
-  description: 'Información sobre las cookies utilizadas en TrámitesEspaña conforme al RGPD y la normativa española.',
+  description: 'Información sobre las cookies utilizadas en TrámitesHoy conforme al RGPD y la normativa española.',
   alternates: { canonical: '/politica-de-cookies' },
 }
 
@@ -146,7 +146,7 @@ export default function PoliticaCookiesPage() {
         <p>
           Para más información, consulta nuestra{' '}
           <a href="/politica-de-privacidad">Política de privacidad</a> o escríbenos a{' '}
-          <strong>privacidad@tramites-espana.es</strong>.
+          <strong>privacidad@tramiteshoy.es</strong>.
         </p>
       </div>
     </div>

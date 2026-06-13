@@ -12,8 +12,8 @@ const inter = Inter({
   display: 'swap',
 })
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramites-espana.es'
-const SITE_NAME = 'Trámites España'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramiteshoy.es'
+const SITE_NAME = 'TrámitesHoy'
 const SITE_DESCRIPTION =
   'Guías claras y actualizadas sobre trámites, ayudas y burocracia española. Todo lo que necesitas saber explicado paso a paso.'
 

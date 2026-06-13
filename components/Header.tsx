@@ -17,9 +17,9 @@ export function Header() {
           <Link
             href="/"
             className="text-xl font-extrabold text-brand-700 tracking-tight hover:text-brand-900 transition-colors"
-            aria-label="Trámites España — inicio"
+            aria-label="TrámitesHoy — inicio"
           >
-            Trámites<span className="text-gray-900">España</span>
+            Trámites<span className="text-gray-900">Hoy</span>
           </Link>
 
           {/* Móvil: botón hamburguesa */}

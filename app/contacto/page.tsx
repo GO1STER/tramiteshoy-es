@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contacto',
-  description: 'Contacta con el equipo de TrámitesEspaña para correcciones, sugerencias o consultas sobre el sitio.',
+  description: 'Contacta con el equipo de TrámitesHoy para correcciones, sugerencias o consultas sobre el sitio.',
   alternates: { canonical: '/contacto' },
   robots: { index: false },
 }
@@ -27,7 +27,7 @@ export default function ContactoPage() {
         method="POST"
         className="space-y-5"
       >
-        <input type="hidden" name="_subject" value="Contacto desde TrámitesEspaña" />
+        <input type="hidden" name="_subject" value="Contacto desde TrámitesHoy" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="/contacto?enviado=1" />
 

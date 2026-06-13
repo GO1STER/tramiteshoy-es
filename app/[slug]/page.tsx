@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticleBySlug(slug)
   if (!article) return {}
 
-  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramites-espana.es'
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramiteshoy.es'
 
   return {
     title: article.title,
@@ -63,13 +63,13 @@ function ArticleJsonLd({ article, url }: { article: ReturnType<typeof getArticle
     url,
     author: {
       '@type': 'Organization',
-      name: 'TrámitesEspaña',
-      url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramites-espana.es',
+      name: 'TrámitesHoy',
+      url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramiteshoy.es',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'TrámitesEspaña',
-      url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramites-espana.es',
+      name: 'TrámitesHoy',
+      url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramiteshoy.es',
     },
     keywords: article.keywords?.join(', '),
   }
@@ -104,7 +104,7 @@ export default async function ArticlePage({ params }: Props) {
   const related = getArticlesByCategory(article.category)
     .filter((a) => a.slug !== article.slug)
     .slice(0, 4)
-  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramites-espana.es'
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramiteshoy.es'
   const articleUrl = `${SITE_URL}/${slug}`
 
   const dateFormatted = format(new Date(article.date), "d 'de' MMMM 'de' yyyy", { locale: es })

@@ -11,7 +11,7 @@ export function Footer() {
           {/* Marca */}
           <div className="space-y-3">
             <Link href="/" className="text-lg font-extrabold text-brand-700">
-              Trámites<span className="text-gray-900">España</span>
+              Trámites<span className="text-gray-900">Hoy</span>
             </Link>
             <p className="text-sm text-gray-600 leading-relaxed">
               Guías claras y actualizadas sobre trámites, ayudas y burocracia española. Sin jerga, sin rodeos.
@@ -83,7 +83,7 @@ export function Footer() {
 
         <div className="mt-10 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-gray-500">
-            © {year} TrámitesEspaña. Todos los derechos reservados.
+            © {year} TrámitesHoy. Todos los derechos reservados.
           </p>
           <p className="text-xs text-gray-400">
             La información de este sitio es orientativa. Consulta siempre fuentes oficiales.

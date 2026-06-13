@@ -5,7 +5,7 @@ import { CATEGORIES } from '@/lib/categories'
 import { ArticleCard } from '@/components/ArticleCard'
 
 export const metadata: Metadata = {
-  title: 'Trámites España — Guías de trámites, ayudas y burocracia española',
+  title: 'TrámitesHoy — Guías de trámites y ayudas en España',
   description:
     'Resuelve tus dudas sobre trámites, ayudas y burocracia en España. Guías actualizadas paso a paso: Seguridad Social, Hacienda, DGT, autónomos y más.',
   alternates: { canonical: '/' },

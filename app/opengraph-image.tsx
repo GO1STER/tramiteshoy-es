@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'TrámitesEspaña — Guías de trámites y ayudas en España'
+export const alt = 'TrámitesHoy — Guías de trámites y ayudas en España'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

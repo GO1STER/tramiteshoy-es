@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Sobre nosotros',
   description:
-    'Conoce el equipo detrás de TrámitesEspaña, un proyecto independiente dedicado a explicar la burocracia española de forma clara y accesible.',
+    'Conoce el equipo detrás de TrámitesHoy, un proyecto independiente dedicado a explicar la burocracia española de forma clara y accesible.',
   alternates: { canonical: '/sobre-nosotros' },
 }
 
@@ -14,7 +14,7 @@ export default function SobreNosotrosPage() {
 
       <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
-          <strong>TrámitesEspaña</strong> es un proyecto editorial independiente creado con un objetivo simple:
+          <strong>TrámitesHoy</strong> es un proyecto editorial independiente creado con un objetivo simple:
           explicar la burocracia española en un lenguaje claro, sin tecnicismos innecesarios y siempre actualizado.
         </p>
 

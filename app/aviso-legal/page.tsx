@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Aviso legal',
-  description: 'Aviso legal de TrámitesEspaña conforme a la Ley de Servicios de la Sociedad de la Información (LSSI).',
+  description: 'Aviso legal de TrámitesHoy conforme a la Ley de Servicios de la Sociedad de la Información (LSSI).',
   alternates: { canonical: '/aviso-legal' },
 }
 
-const SITE_URL = 'https://tramites-espana.es'
-const CONTACT_EMAIL = 'legal@tramites-espana.es'
+const SITE_URL = 'https://tramiteshoy.es'
+const CONTACT_EMAIL = 'legal@tramiteshoy.es'
 const LAST_UPDATED = '1 de junio de 2025'
 
 export default function AvisoLegalPage() {
@@ -21,7 +21,7 @@ export default function AvisoLegalPage() {
         <p>
           En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de
           Comercio Electrónico (LSSI-CE), se informa que el sitio web <strong>{SITE_URL}</strong> es titularidad de{' '}
-          <strong>TrámitesEspaña</strong>.
+          <strong>TrámitesHoy</strong>.
         </p>
         <ul>
           <li><strong>Correo electrónico:</strong> {CONTACT_EMAIL}</li>
@@ -42,7 +42,7 @@ export default function AvisoLegalPage() {
           reflejar las últimas modificaciones normativas.
         </p>
         <p>
-          TrámitesEspaña no se responsabiliza de las decisiones adoptadas por los usuarios basándose en la
+          TrámitesHoy no se responsabiliza de las decisiones adoptadas por los usuarios basándose en la
           información aquí publicada. Para situaciones concretas, se recomienda consultar con un profesional
           habilitado (abogado, asesor fiscal, graduado social) o acudir directamente a los organismos oficiales
           competentes.
@@ -51,7 +51,7 @@ export default function AvisoLegalPage() {
         <h2>4. Propiedad intelectual e industrial</h2>
         <p>
           Los textos, gráficos, logotipos, iconos, imágenes y demás elementos del sitio web son propiedad de
-          TrámitesEspaña o de terceros que han autorizado su uso. Quedan protegidos por la legislación española e
+          TrámitesHoy o de terceros que han autorizado su uso. Quedan protegidos por la legislación española e
           internacional sobre propiedad intelectual e industrial.
         </p>
         <p>
@@ -60,7 +60,7 @@ export default function AvisoLegalPage() {
         </p>
 
         <h2>5. Limitación de responsabilidad</h2>
-        <p>TrámitesEspaña no garantiza:</p>
+        <p>TrámitesHoy no garantiza:</p>
         <ul>
           <li>La exactitud, exhaustividad o actualidad de los contenidos.</li>
           <li>La disponibilidad continua e ininterrumpida del sitio web.</li>
@@ -69,13 +69,13 @@ export default function AvisoLegalPage() {
         </ul>
         <p>
           Los enlaces externos (a organismos oficiales, BOE u otros sitios) se facilitan únicamente como referencia.
-          TrámitesEspaña no controla ni asume responsabilidad por los contenidos de terceros enlazados.
+          TrámitesHoy no controla ni asume responsabilidad por los contenidos de terceros enlazados.
         </p>
 
         <h2>6. Publicidad</h2>
         <p>
           Este sitio puede mostrar anuncios a través de Google AdSense. Los anunciantes son responsables de sus
-          propios contenidos. TrámitesEspaña no avala los productos o servicios anunciados.
+          propios contenidos. TrámitesHoy no avala los productos o servicios anunciados.
         </p>
 
         <h2>7. Legislación aplicable y jurisdicción</h2>

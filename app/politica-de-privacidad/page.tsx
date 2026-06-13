@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Política de privacidad',
-  description: 'Política de privacidad de TrámitesEspaña conforme al RGPD y la LOPDGDD española.',
+  description: 'Política de privacidad de TrámitesHoy conforme al RGPD y la LOPDGDD española.',
   alternates: { canonical: '/politica-de-privacidad' },
 }
 
-const SITE_NAME = 'TrámitesEspaña'
-const SITE_URL = 'https://tramites-espana.es'
-const CONTACT_EMAIL = 'privacidad@tramites-espana.es'
+const SITE_NAME = 'TrámitesHoy'
+const SITE_URL = 'https://tramiteshoy.es'
+const CONTACT_EMAIL = 'privacidad@tramiteshoy.es'
 const LAST_UPDATED = '1 de junio de 2025'
 
 export default function PrivacidadPage() {

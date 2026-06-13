@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllArticles } from '@/lib/mdx'
 import { CATEGORIES } from '@/lib/categories'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramites-espana.es'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tramiteshoy.es'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles()
