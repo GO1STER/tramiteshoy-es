@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getAllArticles, getArticlesByCategory } from '@/lib/mdx'
 import { CATEGORIES } from '@/lib/categories'
 import { ArticleCard } from '@/components/ArticleCard'
+import { NewsletterSection } from '@/components/NewsletterSection'
 
 export const metadata: Metadata = {
   title: 'TrámitesHoy — Guías de trámites y ayudas en España',
@@ -85,6 +86,11 @@ export default function HomePage() {
             ))}
           </div>
         )}
+      </section>
+
+      {/* Newsletter */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <NewsletterSection />
       </section>
 
       {/* CTA informativo */}

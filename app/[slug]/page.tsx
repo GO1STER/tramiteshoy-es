@@ -10,6 +10,7 @@ import { AdSlot } from '@/components/AdSlot'
 import { TableOfContents } from '@/components/TableOfContents'
 import { RelatedArticles } from '@/components/RelatedArticles'
 import { FaqJsonLd } from '@/components/FaqJsonLd'
+import { NewsletterForm } from '@/components/NewsletterForm'
 import Link from 'next/link'
 
 export const revalidate = 3600
@@ -165,6 +166,15 @@ export default async function ArticlePage({ params }: Props) {
 
             {/* Anuncio al final del artículo */}
             <AdSlot slot="article-bottom" format="rectangle" />
+
+            {/* Newsletter inline */}
+            <div className="my-8 p-6 bg-brand-50 border border-brand-100 rounded-2xl">
+              <p className="text-sm font-semibold text-brand-700 mb-1">📬 ¿Te ha sido útil esta guía?</p>
+              <p className="text-sm text-gray-600 mb-4">
+                Suscríbete y te avisamos cuando publiquemos nuevas guías sobre ayudas, trámites y prestaciones.
+              </p>
+              <NewsletterForm compact />
+            </div>
 
             {/* Artículos relacionados */}
             <RelatedArticles articles={related} />
