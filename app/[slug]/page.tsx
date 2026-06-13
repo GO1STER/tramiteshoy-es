@@ -9,6 +9,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import { AdSlot } from '@/components/AdSlot'
 import { TableOfContents } from '@/components/TableOfContents'
 import { RelatedArticles } from '@/components/RelatedArticles'
+import { FaqJsonLd } from '@/components/FaqJsonLd'
 import Link from 'next/link'
 
 export const revalidate = 3600
@@ -114,6 +115,7 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <>
       <ArticleJsonLd article={article} url={articleUrl} />
+      {article.faqs && <FaqJsonLd faqs={article.faqs} />}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Breadcrumb */}

@@ -4,6 +4,11 @@ import matter from 'gray-matter'
 
 const contentDir = path.join(process.cwd(), 'content')
 
+export interface Faq {
+  q: string
+  a: string
+}
+
 export interface ArticleFrontmatter {
   title: string
   description: string
@@ -12,6 +17,7 @@ export interface ArticleFrontmatter {
   date: string
   updated?: string
   keywords: string[]
+  faqs?: Faq[]
 }
 
 export interface Article extends ArticleFrontmatter {
