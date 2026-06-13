@@ -40,7 +40,7 @@ export default function OGImage() {
             T
           </div>
           <span style={{ fontSize: '48px', fontWeight: 800, color: 'white' }}>
-            Trámites<span style={{ color: '#93c5fd' }}>España</span>
+            Trámites<span style={{ color: '#93c5fd' }}>Hoy</span>
           </span>
         </div>
 
