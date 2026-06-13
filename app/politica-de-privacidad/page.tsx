@@ -44,7 +44,39 @@ export default function PrivacidadPage() {
           consentimiento en cualquier momento desde la <a href="/politica-de-cookies">Política de cookies</a>.
         </p>
 
-        <h3>2.2 Formulario de contacto</h3>
+        <h3>2.2 Publicidad: Google AdSense</h3>
+        <p>
+          Este sitio web utiliza <strong>Google AdSense</strong>, un servicio de publicidad de Google LLC.
+          Google AdSense puede utilizar cookies y tecnologías similares para:
+        </p>
+        <ul>
+          <li>Mostrar anuncios personalizados basados en tus visitas anteriores a este y otros sitios web.</li>
+          <li>Medir la efectividad de los anuncios mostrados.</li>
+          <li>Evitar que veas el mismo anuncio repetidamente.</li>
+          <li>Detectar y prevenir fraudes publicitarios.</li>
+        </ul>
+        <p>
+          Google puede utilizar la información recopilada para personalizar los anuncios que ves en otros sitios
+          de la Red de Display de Google. Puedes <strong>desactivar la publicidad personalizada</strong> en{' '}
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">
+            www.google.com/settings/ads
+          </a>{' '}
+          o a través de la iniciativa <a href="https://youronlinechoices.eu" rel="noopener noreferrer" target="_blank">
+            Your Online Choices
+          </a>.
+        </p>
+        <p>
+          Las cookies publicitarias de Google solo se activan si otorgas tu consentimiento en el banner de cookies.
+          Sin consentimiento, los anuncios que aparezcan serán de carácter no personalizado.
+        </p>
+        <p>
+          Más información en la{' '}
+          <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">
+            Política de publicidad de Google
+          </a>.
+        </p>
+
+        <h3>2.3 Formulario de contacto</h3>
         <p>
           Si nos envías un mensaje a través del formulario de contacto, recogemos tu nombre y dirección de correo
           electrónico con la finalidad de gestionar tu consulta o sugerencia. La base jurídica es el consentimiento

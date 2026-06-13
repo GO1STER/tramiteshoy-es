@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  ...(process.env.NEXT_PUBLIC_ADSENSE_ID && {
+    other: { 'google-adsense-account': process.env.NEXT_PUBLIC_ADSENSE_ID },
+  }),
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     shortcut: '/favicon.svg',
