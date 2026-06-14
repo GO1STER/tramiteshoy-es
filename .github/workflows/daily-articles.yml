@@ -1,0 +1,55 @@
+name: Publicar artículos diarios
+
+on:
+  schedule:
+    # Todos los días a las 08:00 UTC (10:00 hora España peninsular)
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    # Permite ejecutarlo manualmente desde GitHub → Actions
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar Anthropic SDK
+        run: npm install @anthropic-ai/sdk --no-save
+
+      - name: Generar artículos
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-articles.mjs
+
+      - name: Comprobar si hay artículos nuevos
+        id: check
+        run: |
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit y push de los artículos
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "TrámitesHoy Bot"
+          git config user.email "bot@tramiteshoy.es"
+          git add content/ scripts/topics-done.json
+          git commit -m "content: 4 nuevos artículos $(date +%Y-%m-%d)"
+          git push
