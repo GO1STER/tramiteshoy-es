@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  verification: { google: 'fhAI5OopGYEcRc8yTf67iN6_Cevo5teHDqtpVYy_5R8' },
   ...(process.env.NEXT_PUBLIC_ADSENSE_ID && {
     other: { 'google-adsense-account': process.env.NEXT_PUBLIC_ADSENSE_ID },
   }),
