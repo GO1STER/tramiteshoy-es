@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const articles = getAllArticles()
-  const latest = articles.slice(0, 6)
+  const featured = articles.find((a) => a.slug === 'declaracion-renta-2026') ?? articles[0]
+  const latest = articles.filter((a) => a.slug !== featured?.slug).slice(0, 9)
 
   return (
     <>
@@ -46,6 +47,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Artículo destacado — Renta 2026 (campaña activa) */}
+      {featured && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-2">
+          <div className="relative rounded-2xl overflow-hidden bg-amber-50 border border-amber-200 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+            <div className="flex-shrink-0 bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide sm:hidden">
+              Ahora importante
+            </div>
+            <div className="hidden sm:flex flex-shrink-0 flex-col items-center justify-center bg-amber-100 border border-amber-300 rounded-xl p-4 text-center min-w-[80px]">
+              <span className="text-3xl">📅</span>
+              <span className="text-xs font-bold text-amber-700 mt-1 leading-tight">Hasta<br />30 jun</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">Campaña activa — plazo: 30 de junio 2026</p>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 leading-snug mb-2">
+                <Link href={`/${featured.slug}`} className="hover:text-brand-700 transition-colors after:absolute after:inset-0">
+                  {featured.title}
+                </Link>
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">{featured.description}</p>
+            </div>
+            <Link
+              href={`/${featured.slug}`}
+              className="flex-shrink-0 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap"
+            >
+              Leer guía →
+            </Link>
+          </div>
+        </section>
+      )}
+
       {/* Categorías */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Explora por categoría</h2>
@@ -73,6 +104,9 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-gray-900">Últimas guías</h2>
+          <Link href="/guias" className="text-sm text-brand-600 hover:text-brand-700 font-medium">
+            Ver todas ({articles.length}) →
+          </Link>
         </div>
 
         {latest.length === 0 ? (
@@ -86,6 +120,15 @@ export default function HomePage() {
             ))}
           </div>
         )}
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/guias"
+            className="inline-block border border-brand-200 text-brand-700 hover:bg-brand-50 font-semibold px-6 py-3 rounded-xl transition-colors"
+          >
+            Ver todas las guías ({articles.length} disponibles)
+          </Link>
+        </div>
       </section>
 
       {/* Newsletter */}

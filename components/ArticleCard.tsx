@@ -42,10 +42,15 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
         <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">{article.description}</p>
 
         {/* Meta */}
-        <div className="flex items-center gap-3 text-xs text-gray-400 mt-auto pt-2">
+        <div className="flex items-center gap-3 text-xs text-gray-400 mt-auto pt-2 flex-wrap">
           <time dateTime={article.date}>{dateFormatted}</time>
           <span>·</span>
           <span>{article.readingTime} min de lectura</span>
+          {article.updated && article.updated >= '2026-01-01' && (
+            <span className="bg-green-100 text-green-700 font-semibold px-2 py-0.5 rounded-full text-xs">
+              Actualizado 2026
+            </span>
+          )}
         </div>
       </div>
     </article>

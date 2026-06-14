@@ -43,6 +43,17 @@ export function Header() {
 
         {/* Navegación de categorías — desktop */}
         <nav aria-label="Categorías" className="hidden sm:flex items-center gap-1 pb-2 overflow-x-auto">
+          <Link
+            href="/guias"
+            className={`whitespace-nowrap text-sm font-medium px-3 py-1.5 rounded-full transition-colors ${
+              pathname === '/guias'
+                ? 'bg-brand-600 text-white'
+                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+            }`}
+          >
+            Todas las guías
+          </Link>
+          <span className="text-gray-300 text-xs mx-1">|</span>
           {CATEGORIES.map((cat) => {
             const href = `/categoria/${cat.slug}`
             const active = pathname.startsWith(href)
@@ -69,6 +80,15 @@ export function Header() {
           aria-label="Menú móvil"
           className="sm:hidden border-t border-gray-100 bg-white px-4 py-3 space-y-1"
         >
+          <Link
+            href="/guias"
+            onClick={() => setMenuOpen(false)}
+            className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              pathname === '/guias' ? 'bg-brand-50 text-brand-700' : 'text-gray-700 hover:bg-gray-50'
+            }`}
+          >
+            <span>📋</span> Todas las guías
+          </Link>
           {CATEGORIES.map((cat) => {
             const href = `/categoria/${cat.slug}`
             const active = pathname.startsWith(href)
