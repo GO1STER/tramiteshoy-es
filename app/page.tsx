@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const articles = getAllArticles()
-  const featured = articles.find((a) => a.slug === 'declaracion-renta-2026') ?? articles[0]
+  const featured = articles.find((a) => a.slug === 'error-declaracion-renta-2026-que-hacer') ?? articles[0]
   const latest = articles.filter((a) => a.slug !== featured?.slug).slice(0, 9)
 
   return (
@@ -56,10 +56,10 @@ export default function HomePage() {
             </div>
             <div className="hidden sm:flex flex-shrink-0 flex-col items-center justify-center bg-amber-100 border border-amber-300 rounded-xl p-4 text-center min-w-[80px]">
               <span className="text-3xl">📅</span>
-              <span className="text-xs font-bold text-amber-700 mt-1 leading-tight">Hasta<br />30 jun</span>
+              <span className="text-xs font-bold text-amber-700 mt-1 leading-tight">Renta<br />2026</span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">Campaña activa — plazo: 30 de junio 2026</p>
+              <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">Campaña cerrada hoy — ¿cometiste algún error?</p>
               <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 leading-snug mb-2">
                 <Link href={`/${featured.slug}`} className="hover:text-brand-700 transition-colors after:absolute after:inset-0">
                   {featured.title}
